@@ -1,6 +1,6 @@
 import { Navigate, Route, useLocation } from 'react-router-dom';
 import useIsAuthenticatedStore from '../state/isAuthenticated';
-import useIsLoadingStore from '../state/isloading';
+import useIsLoadingStore from '../state/isLoading';
 
 /**
  * Renders a protected route if the user is authenticated, otherwise redirects to the signin page.
