@@ -4,7 +4,8 @@ import useIsLoadingStore from '../state/isloading';
 
 /**
  * Renders a protected route if the user is authenticated, otherwise redirects to the signin page.
- *
+ * base on https://blog.logrocket.com/complete-guide-authentication-with-react-router-v6/
+ * base on https://adarshaacharya.com.np/blog/role-based-auth-with-react-router-v6
  * @param {Object} component - The component to render.
  * @param {...Object} restOfProps - The remaining props to pass to the Route component.
  * @return {JSX.Element} - The rendered component or a Redirect component if the user is not authenticated.
