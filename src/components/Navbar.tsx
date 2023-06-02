@@ -21,10 +21,12 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from "@chakra-ui/icons"
+import { useWeb3Modal } from '@web3modal/react'
 
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure()
-
+    const { open, close } = useWeb3Modal()
+    
     return (
         <Box>
             <Flex
@@ -89,8 +91,8 @@ export default function WithSubnavigation() {
                         fontSize={"sm"}
                         fontWeight={600}
                         color={"white"}
-                        href="/signup"
                         bg={"pink.400"}
+                        onClick={() => open()}
                         _hover={{
                             bg: "pink.300",
                         }}
