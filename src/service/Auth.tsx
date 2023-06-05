@@ -22,7 +22,7 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} />;
+    return <Navigate to="/index" state={{ from: location }} />;
   }
 
   return children;
