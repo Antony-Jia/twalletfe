@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import FrontPage from './pages/FrontPage'
 import DashboardPage from './pages/DashboardPage'
 import PrivateRoute from './service/Auth'
+import NotFound from './pages/404page'
 function PageRouter() {
     return (
         <Routes>
@@ -16,6 +17,7 @@ function PageRouter() {
                 </PrivateRoute>
             } >
             </Route>
+            <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }
