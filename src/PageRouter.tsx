@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
 import FrontPage from './pages/FrontPage'
 import DashboardPage from './pages/DashboardPage'
 import PrivateRoute from './service/Auth'
