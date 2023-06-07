@@ -14,7 +14,7 @@ export default function CallToActionWithAnnotation() {
     return (
         <>
 
-            <Container maxW={"3xl"}>
+            <Container maxW={"4xl"}>
                 <Stack
                     as={Box}
                     textAlign={"center"}
@@ -22,13 +22,13 @@ export default function CallToActionWithAnnotation() {
                     py={{ base: 20, md: 36 }}
                 >
                     <Heading
-                        fontWeight={600}
+                        fontWeight={800}
                         fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
                         lineHeight={"110%"}
                     >
-                        Make money from <br />
+                        Make your blockchain wallet <br />
                         <Text as={"span"} color={"green.400"}>
-                            your audience
+                            more intelligent
                         </Text>
                     </Heading>
                     <Text color={"gray.500"}>

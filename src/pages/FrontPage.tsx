@@ -9,20 +9,27 @@ import { Center, Box } from '@chakra-ui/react'
 // import React, { useState, useEffect } from 'react';
 
 
-let config = {
-  method: 'get',
-  maxBodyLength: Infinity,
-  url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5&convert=USD',
-  headers: { 
-    'Accept': 'application/json', 
-    'X-CMC_PRO_API_KEY': process.env.COINMARKETCAP_KEY
-  }
-};
-
 function FrontPage() {
 
   // const [data, setData] = useState(null);
   // const [loading, setLoading] = useState(true);
+
+  const getPriceData = async () => {
+    var myHeaders = new Headers();
+    myHeaders.append("Accept", "application/json");
+    myHeaders.append("X-CMC_PRO_API_KEY", "6e73ad78-792c-42bd-87a7-0b427480aa4f");
+
+    var requestOptions : RequestInit  = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5&convert=USD", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  }
 
 
   const findAnyName = async () => {
