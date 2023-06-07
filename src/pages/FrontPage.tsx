@@ -8,6 +8,17 @@ import { dashboardTableData } from '../components/variables/general'
 import { Center, Box } from '@chakra-ui/react'
 // import React, { useState, useEffect } from 'react';
 
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5&convert=USD',
+  headers: { 
+    'Accept': 'application/json', 
+    'X-CMC_PRO_API_KEY': process.env.COINMARKETCAP_KEY
+  }
+};
+
 function FrontPage() {
 
   // const [data, setData] = useState(null);
