@@ -1,5 +1,6 @@
 // Chakra imports
 import {
+    Center,
     Flex,
     Table,
     Tbody,
@@ -22,9 +23,11 @@ const FrontPageTable = ({ title, captions, data }) => {
         <Card my='22px' overflowX={{ sm: "scroll", xl: "hidden" }} variant={undefined} >
             <CardHeader p='6px 0px 22px 0px' variant={undefined} >
                 <Flex direction='column'>
-                    <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
-                        {title}
-                    </Text>
+                    <Center>
+                        <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
+                            {title}
+                        </Text>
+                    </Center>
                 </Flex>
             </CardHeader>
             <CardBody variant={undefined} >
