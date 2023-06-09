@@ -46,13 +46,24 @@ const FrontPageTable = ({ title, captions, data }) => {
                     <Tbody>
                         {data.map((row) => {
                             return (
+                                // <TablesProjectRow
+                                //     key={row.name}
+                                //     name={row.name}
+                                //     logo={row.logo}
+                                //     status={row.status}
+                                //     budget={row.budget}
+                                //     progression={row.progression}
+                                // />
                                 <TablesProjectRow
                                     key={row.name}
                                     name={row.name}
-                                    logo={row.logo}
-                                    status={row.status}
-                                    budget={row.budget}
-                                    progression={row.progression}
+                                    // logo={row.logo}
+                                    price={row.price}
+                                    onehour={row.onehour}
+                                    oneday={row.oneday}
+                                    sevenday={row.sevenday}
+                                    marketcap={row.marketcap}
+                                    volume={row.volume}
                                 />
                             );
                         })}

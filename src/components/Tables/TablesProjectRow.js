@@ -12,13 +12,16 @@ import {
 import { FaEllipsisV } from "react-icons/fa";
 
 function TablesProjectRow(props) {
-  const { logo, name, status, budget, progression } = props;
+
+  const { name, price, onehour, oneday, sevenday, marketcap, volume} = props;
   const textColor = useColorModeValue("gray.700", "white");
+  // const { logo, name, status, budget, progression } = props;
+
   return (
     <Tr>
       <Td minWidth={{ sm: "250px" }} pl="0px">
         <Flex alignItems="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Icon as={logo} h={"24px"} w={"24px"} me="18px" />
+          {/* <Icon as={logo} h={"24px"} w={"24px"} me="18px" /> */}
           <Text
             fontSize="md"
             color={textColor}
@@ -31,34 +34,33 @@ function TablesProjectRow(props) {
       </Td>
       <Td>
         <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
-          {budget}
+          {price}
         </Text>
       </Td>
       <Td>
         <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
-          {status}
+          {onehour}
         </Text>
       </Td>
       <Td>
-        <Flex direction="column">
-          <Text
-            fontSize="md"
-            color="teal.300"
-            fontWeight="bold"
-            pb=".2rem"
-          >{`${progression}%`}</Text>
-          <Progress
-            colorScheme={progression === 100 ? "teal" : "cyan"}
-            size="xs"
-            value={progression}
-            borderRadius="15px"
-          />
-        </Flex>
+        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+          {oneday}
+        </Text>
       </Td>
       <Td>
-        <Button p="0px" bg="transparent">
-          <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
-        </Button>
+        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+          {sevenday}
+        </Text>
+      </Td>
+      <Td>
+        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+          {marketcap}
+        </Text>
+      </Td>
+      <Td>
+        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+          {volume}
+        </Text>
       </Td>
     </Tr>
   );
